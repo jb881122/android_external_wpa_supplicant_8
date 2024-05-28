@@ -826,6 +826,7 @@ void HidlManager::notifyAnqpQueryDone(
 		hidl_anqp_data.domainName =
 		    misc_utils::convertWpaBufToVector(anqp->domain_name);
 
+#if 0
 		struct wpa_bss_anqp_elem *elem;
 		dl_list_for_each(elem, &anqp->anqp_elems, struct wpa_bss_anqp_elem,
 				 list) {
@@ -835,6 +836,7 @@ void HidlManager::notifyAnqpQueryDone(
 				break;
 			}
 		}
+#endif
 
 		hidl_hs20_anqp_data.operatorFriendlyName =
 		    misc_utils::convertWpaBufToVector(
